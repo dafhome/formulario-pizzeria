@@ -47,11 +47,48 @@ form{
     padding: 50px;
     border-radius: 5px;
 }
-.extra{
+
+.extra
+{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    /* position: relative; */
 }
+.extra-ing{
+    position: relative;
+}
+input[type="checkbox"] {
+    display: none;
+    margin-right: 10px;
+}
+input[type="checkbox"] + label:before {
+	content: "";
+	width: 26px;
+	height: 26px;
+	float: left;
+	margin: 0.5em 0.5em 0 0;
+	border: 2px solid #ccc;
+	background: #fff;
+}
+input[type="checkbox"]:checked + label::before{
+	border-color: #0fbf12;
+}
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    width:12px;
+    height:6px;
+    border: 4px solid #0fbf12;
+    float: left;
+    margin: -2.2em;
+    border-right: 0;
+    border-top: 0;
+    margin-top: 1.2em;
+    transform: rotate(-55deg);
+}
+
 .nombre{
     display: flex;
     /* justify-content: center; */
@@ -67,10 +104,17 @@ form{
     color: white;
 }
 
-.opcion{
+.opcion, .opcion2{
     font-family: monospace;
     color: rgb(237, 168, 168);
     text-shadow: 3px 3px 3px black;
+    margin-left: 10px;
+    
+}
+
+.opcion{
+    position: relative;
+    bottom: -12px;
 }
 
 select{
@@ -87,11 +131,14 @@ input, textarea{
 
 input[type="time"]{
     width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button{
     padding: 15px;
-    width: 40%;
+    width: 50%;
     /* border-radius: 5px; */
     
 }
@@ -99,12 +146,17 @@ button{
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    
 }
-.radio{
+.radio-container
+{
     display: flex;
-    /* flex-direction: column; */
+    justify-content: space-around;
     align-items: center;
-    /* justify-content: flex-start; */
+}
+input[type="radio"]{
+    width: 15px;
+    
 }
 
 p{
@@ -115,8 +167,11 @@ p{
     background-color: rgba(184, 184, 184, 0.705) ;
     padding: 40px;
     text-shadow: 3px 3px 3px black;
-
 }
 a{
     text-decoration: none;
 }
+
+/* input [type="checkbox"]{
+    background-color: black;
+} */
