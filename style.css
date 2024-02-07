@@ -85,7 +85,7 @@ input[type="checkbox"]:checked + label::after {
     margin: -2.2em;
     border-right: 0;
     border-top: 0;
-    margin-top: 1.2em;
+    margin-top: 0.3em;
     transform: rotate(-55deg);
 }
 
